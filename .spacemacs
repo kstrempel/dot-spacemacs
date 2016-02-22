@@ -37,6 +37,7 @@ values."
      version-control
      python
      clojure
+     restclient
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -251,13 +252,29 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  (global-set-key (kbd "C--") 'avy-goto-char)
-  (global-set-key (kbd "C-#") 'iedit-mode)
+  (global-set-key (kbd "C-q") 'avy-goto-char)
+  (global-set-key (kbd "C-ä") 'iedit-mode)
   (global-set-key (kbd "C-+") 'mark-word)
   (global-set-key (kbd "C-*") 'mark-sexp)
+  (global-set-key (kbd "C-#") 'ace-window)
+  (global-set-key (kbd "C-'") 'ace-delete-window)
+  (global-set-key (kbd "C-p") 'hippie-expand)
   (setq neo-show-hidden-files nil)
   )
 
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(paradox-github-token t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
