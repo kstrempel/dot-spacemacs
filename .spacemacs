@@ -38,6 +38,7 @@ values."
      python
      clojure
      restclient
+     go
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -76,7 +77,7 @@ values."
    ;; variable is `emacs' then the `holy-mode' is enabled at startup. `hybrid'
    ;; uses emacs key bindings for vim's insert mode, but otherwise leaves evil
    ;; unchanged. (default 'vim)
-   dotspacemacs-editing-style 'emacs
+   dotspacemacs-editing-style 'vim
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
@@ -259,8 +260,7 @@ layers configuration. You are free to put any user code."
   (global-set-key (kbd "C-#") 'ace-window)
   (global-set-key (kbd "C-'") 'ace-delete-window)
   (global-set-key (kbd "C-p") 'hippie-expand)
-  (setq neo-show-hidden-files nil)
-  )
+  (setq neo-show-hidden-files nil))
 
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -270,6 +270,9 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(paradox-github-token t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
